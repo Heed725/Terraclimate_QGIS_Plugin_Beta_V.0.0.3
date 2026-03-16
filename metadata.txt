@@ -1,0 +1,44 @@
+[general]
+name=TerraClimateDownloader
+qgisMinimumVersion=3.16
+qgisMaximumVersion=3.99
+description=Download and clip TerraClimate climate data via OPeNDAP. Easy installation with automatic dependency setup. Supports 14 climate variables (1958-2025).
+about=Downloads TerraClimate climate data for any region. Simply select a polygon layer as your boundary, choose a climate variable, and pick either a single year or a year range. The plugin downloads only the data you need and clips it to your area of interest.
+
+    Features:
+    - 14 climate variables including temperature, precipitation, evapotranspiration, and more
+    - Data from 1958 to 2025
+    - Automatic dependency installation helper
+    - Downloads only the area you need (efficient OPeNDAP subsetting)
+    - Single month output or multiband rasters for full-year and multi-year downloads
+
+    First-time setup: Use Plugins menu > TerraClimate Downloader > Install Dependencies to automatically install required Python packages.
+
+    Icon by Fusion5085. TerraClimate dataset by Abatzoglou et al. (2018), Scientific Data.
+
+version=0.0.3
+author=Hemed Lungo
+email=Hemedlungo@gmail.com
+category=Raster
+icon=icon.svg
+experimental=False
+deprecated=False
+tags=climate, terraclimate, downloader, opendap, netcdf, xarray, rioxarray, gdal, processing, temperature, precipitation, evapotranspiration
+
+homepage=https://github.com/Heed725/Terraclimate_QGIS_Plugin/
+repository=https://github.com/Heed725/Terraclimate_QGIS_Plugin/
+tracker=https://github.com/Heed725/Terraclimate_QGIS_Plugin/issues
+
+changelog=
+    0.0.3 - Easy Installation & Styling Update:
+        - Added automatic dependency installer (Plugins menu > Install Dependencies)
+        - Auto-applies singleband pseudocolor styling with variable-appropriate color ramps
+        - Temperature: blue-white-red | Precipitation: yellow-green-blue
+        - Drought indices: red-white-blue | Soil moisture: brown-teal
+        - Improved error messages with clear installation instructions
+        - Added dependency status indicator in plugin menu
+        - Better cross-platform support (Windows, macOS, Linux)
+        - Extended year range to 2025
+        - Added year range mode with multiband raster output
+    0.0.2 - Initial public release
+    0.0.1 - Development version
